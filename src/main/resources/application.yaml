@@ -1,0 +1,28 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/ams?serverTimezone=Hongkong
+    username: root
+    password: rootroot
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 2
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapperxml/*.xml
+
+user-operation-log:
+  format: '[{}][{}][{}][{}]'
+
+jwt-config:
+  secret: Gzysb233
+  expireTime: 600
+  #  expireTime: 60000
+  refreshTokenExpireTime: 604800
